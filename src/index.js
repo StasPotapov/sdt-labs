@@ -10,7 +10,6 @@ let url = 'https://en.wikipedia.org/w/api.php?origin=*';
 let articlesInfo = [];
 
 api().then(json => {
-  console.log(json.query.pages);
   Object.values(json.query.pages).forEach(props => {
     articlesInfo.push(articleConstructor(props));
   });
